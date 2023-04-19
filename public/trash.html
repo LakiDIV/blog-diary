@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Blog</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+	<header>
+		<h1>My Blog</h1>
+		<nav>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<article>
+			<header>
+				<h2>Reusable Web Components: How to Store and Manage Common Website Elements in a GitHub Repository</h2>
+				<p class="meta">Posted on <time datetime="2023-04-11">11 April 2023</time> by <a href="#">LakiDIV</a></p>
+			</header>
+			<section>
+				<p>
+                    To achieve this, you can create a new GitHub repository to store all of your common website components such as navigation bars and footers.
+                    <br>
+                    <img src="https://docs.github.com/assets/cb-26377/images/help/repository/create-repository-desc.png" alt="">
+First, create a new repository on GitHub and give it a name that reflects its purpose, for example, "website-components".
+
+Next, create a new directory inside the repository for each component that you want to store. For example, you can create a directory called "nav-bar" for your navigation bar components, and another directory called "footer" for your footer components.
+
+Inside each directory, you can add the different variations of the component. For example, inside the "nav-bar" directory, you can create subdirectories for different types of navigation bars, such as "top-nav" or "side-nav", and then add the HTML, CSS, and JavaScript files for each variation.
+
+Once you have added all of your components, you can use the repository as a submodule in your other projects. To do this, you can add a submodule reference to your other repositories using the following command:
+
+<h6>
+git submodule add <repository-url> <destination-path>
+</h6>
+
+This will create a reference to the "website-components" repository inside your other projects. You can then use the components from the repository in your projects by referencing the files in the submodule.
+
+Finally, whenever you make changes to your common components in the "website-components" repository, you can update the submodule reference in your other projects using the following command:
+<h6>
+    git submodule update --remote
+    </h6>
+
+This will fetch the latest changes from the "website-components" repository and update the submodule reference in your other projects.
+<br><br>
+With this approach, you can easily manage and reuse common components across multiple projects and keep them in sync with updates made to the components in the "website-components" repository.
+                </p>
+			</section>
+			<footer>
+				<ul class="tags">
+					<li><a href="#">Tag1</a></li>
+					<li><a href="#">Tag2</a></li>
+					<li><a href="#">Tag3</a></li>
+				</ul>
+			</footer>
+		</article>
+		<!-- Repeat the above article element for each blog post -->
+	</main>
+	<aside>
+		<section>
+			<h2>About Me</h2>
+			<p><!-- Short bio of the author goes here --></p>
+		</section>
+		<section>
+			<h2>Popular Posts</h2>
+			<ul>
+				<li><a href="#">Popular post 1</a></li>
+				<li><a href="#">Popular post 2</a></li>
+				<li><a href="#">Popular post 3</a></li>
+			</ul>
+		</section>
+		<section>
+			<h2>Categories</h2>
+			<ul>
+				<li><a href="#">Category 1</a></li>
+				<li><a href="#">Category 2</a></li>
+				<li><a href="#">Category 3</a></li>
+			</ul>
+		</section>
+	</aside>
+	<footer>
+		<p>&copy; 2023 My Blog. All rights reserved.</p>
+	</footer>
+</body>
+</html>
